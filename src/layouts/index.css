@@ -18,6 +18,7 @@ a {
   height: 920px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -65,6 +66,12 @@ a {
   color: black;
 }
 
+.Hero svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 @media (max-width: 640px) {
   .HeroGroup {
     padding: 100px 20px;
@@ -87,5 +94,19 @@ a {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
